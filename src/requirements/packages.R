@@ -1,7 +1,8 @@
 
 # MASH Definition Analysis ------------------------------------------------
 mash_def_packages <- c("tidyverse",
-                       "readxl")
+                       "readxl",
+                       "here")
 
 # load_packages function --------------------------------------------------
 
