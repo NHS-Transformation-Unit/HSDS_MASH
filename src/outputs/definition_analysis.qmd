@@ -1,0 +1,116 @@
+---
+title: "Analysis of MASH ICD-10 Definition"
+author: "<a href='https://github.com/ASW-Analyst/'>Andy Wilson</a><br><a href='https://transformationunit.nhs.uk/'>NHS Transformation Unit</a>"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    self-contained: true
+    css: ../config/nhs_tu_theme.css
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  out.width = '100%'
+)
+
+library(here)
+source(paste0(here(), "/src/requirements/packages.R"))
+source(paste0(here(), "/src/requirements/load_packages.R"))
+
+```
+
+```{r logo, echo = FALSE}
+
+htmltools::img(src = knitr::image_uri(paste0(here(), "/images/TU_logo_large.png")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:5%; padding:10px;',
+               width = "180px",
+               heigth = "180px")
+
+```
+
+# Introduction
+This report provides an initial analysis of a coding definition for **Metabolic dysfunction-associated steatohepatitis (MASH)**. This definition uses the [ICD-10](https://icd.who.int/browse10/2019/en) medical classification system, identifying MASH patients as those with:
+
+- A primary diagnosis of **K760**: _Fatty (change of) liver, not elsewhere classified_
+- A primary diagnosis of **K740**: _Hepatic Fibrosis_
+
+We have analysed **[Secondary User Services (SUS)](https://digital.nhs.uk/services/secondary-uses-service-sus)** Admitted Patient Care (APC) data to identify hospital spells where these ICD-10 codes were recorded. This analysis identified a spell where **any episode** had a primary diagnosis of either K740 or K760.
+
+# Exploratory Data Analysis
+
+## Hospital Spell Construction
+The Admitted Patient Care (APC) dataset contains data on all episodes of care that compromise admissions to NHS hospitals or for NHS patients admitted to Independent Sector providers in England. It is important to understand the difference between _Spells_ and _Episodes_ and how this relates to identifying MASH inpatient activity. Spells and Episodes are defined as follows:
+
+* __A Hospital Provider Spell__ is the total continuous stay of a PATIENT using a Hospital Bed on premises controlled by a Health Care Provider during which medical care is the responsibility of one or more CONSULTANTS, or the PATIENT is receiving care under one or more Nursing Episodes or Midwife Episodes in a WARD. [NHS Data Dictionary](https://www.datadictionary.nhs.uk/nhs_business_definitions/hospital_provider_spell.html)
+* __A Consultant Episode__ (Hospital Provider) is the time a PATIENT spends in the continuous care of one CONSULTANT using Hospital Site or Care Home bed(s) of one Health Care Provider or, in the case of shared care, in the care of two or more CONSULTANTS. [NHS Data Dictionary](https://www.datadictionary.nhs.uk/nhs_business_definitions/consultant_episode__hospital_provider_.html)
+
+So in short a *spell* covers the period of care between the patient being admitted and discharged and consists of one or more *episodes* depending on the care they receive during that *spell*. The figure below shows three example hospital spells:
+
+<br/>
+![Examples of spells and episodes](../../images/spells_episodes.example.svg)
+
+In the first example a patient has been admitted on 12/11/2023 until they are discharged on 17/11/2023. During the admission they are under the care of a single consultant within General Surgery. Therefore, the entire spell was constructed from a single episode. Each episode of care will also have a diagnoses codes recorded against them. The primary diagnosis code in this case was **K740** - Hepatic Fibrosis. Therefore, this spell would be identified as MASH activity.
+
+In the second example, the patient was admitted on 12/11/2023 initially under the care of a consultant in General Surgery. They were diagnosed with unspecified liver disease (K769). The next day the patient was transferred to a consultant in Hepatobiliary & Pancreatic Surgery. There diagnosis was updated to **K740** - Hepatic Fibrosis and they remained under the care of this consultant until their discharge on 16/11/2023. Therefore, as the spell contains at least one episode with a primary diagnosis of either K740 or K760 they activity is identified as MASH.
+
+In the final example, the patient is transferred a day after admission to Hepatobiliary & Pancreatic Surgery. Here they are diagnosed with Hepatic Fibrosis so would again be identified as MASH activity. However, they have a third episode of care under a Respiratory consultant where they are primarily treated for influenza.
+
+If the definition is changed to only include spells where the patient is admitted with a MASH diagnosis, i.e. the first episode then only Spell 1 would be identified. Therefore, consideration needs to be given to how MASH activity is identified.
+
+## Spells Identified
+
+```{r spells_ident}
+
+source(paste0(here(), "/src/scripts/analysis/definition_eda.R"))
+
+```
+
+
+Spells data has been extracted from the Admitted Patient Care (APC) dataset via NCDR. This is based of any patient admitted between `r format(admission_date_start, "%d %B %Y")` and `r format(admission_date_end, "%d %B %Y")`. Hospital spells have been identified as MASH activity when:
+
+- A spell contains at least one episode where the primary diagnosis is either K740 or K760.
+
+This approach has identified **`r format(spells_total, big.mark = ",", scientific = FALSE)`** hospital spells with a MASH diagnosis to providers across all of England.
+
+If the definition was amended to consider only spells where the **first** episode has a MASH diagnosis this is reduced to **`r format(spells_first, big.mark = ",", scientific = FALSE)`**.
+
+## Alcohol Related Spells
+MASH is defined as a [long-lasting liver condition](https://britishlivertrust.org.uk/information-and-support/liver-conditions/masld-nafld-and-fatty-liver-disease/) caused by having too much fat within the liver. The causes for MASH are *not associated* with alcohol consumption. Liver disease due to alcohol consumption are identified and diagnosed with different ICD-10 codes.
+
+However, we need to consider if the definition should **exclude** spells where there is an associated alcohol-related code. [Public Health England](https://assets.publishing.service.gov.uk/media/601c0da0e90e0711cf5955b1/RELATI_1-1.pdf) identified ICD-10 codes that are deemed _wholly attributable conditions_. These are shown in the table below:
+
+| Condition                                                     | ICD10 code(s) |
+|---------------------------------------------------------------|---------------|
+| Alcohol-induced pseudo-Cushing’s syndrome                     | E24.4         |
+| Mental and behavioural disorders due to use of alcohol        | F10           |
+| Degeneration of nervous system due to alcohol                 | G31.2         |
+| Alcoholic polyneuropathy                                       | G62.1         |
+| Alcoholic myopathy                                            | G72.1         |
+| Alcoholic cardiomyopathy                                      | I42.6         |
+| Alcoholic gastritis                                           | K29.2         |
+| Alcoholic liver disease                                       | K70           |
+| Alcohol-induced chronic pancreatitis                          | K86.0         |
+| Ethanol poisoning                                             | T51.0         |
+| Methanol poisoning                                            | T51.1         |
+| Toxic effect of alcohol, unspecified                          | T51.9         |
+| Accidental poisoning by and exposure to alcohol               | X45           |
+| Intentional self-poisoning by and exposure to alcohol         | X65           |
+| Poisoning by and exposure to alcohol, undetermined intent     | Y15           |
+| Alcohol-induced acute pancreatitis                            | K85.2         |
+| Foetal alcohol syndrome (dysmorphic)                           | Q86.0         |
+| Excess alcohol blood levels                                   | R78.0         |
+| Evidence of alcohol involvement determined by blood alcohol level | Y90      |
+| Evidence of alcohol involvement determined by level of intoxication | Y91  |
+
+Analysis of the `r format(spells_total, big.mark = ",", scientific = FALSE)` was undertaken to identify if the above ICD-10 codes were also recorded during the spell. This could be either as another primary diagnosis code or as a secondary diagnosis. This analysis identified **`r format(spells_alcohol, big.mark = ",", scientific = FALSE)`** spells that had a wholly attributable alcohol code. Therefore, it needs to be decided whether to exclude any hospital spell for MASH that also identifies an alcohol consumption related condition.
+
+
+# Initial Conclusions
+This analysis has identified two key points that need to be clarified with the current MASH definition. Firstly, do we consider any spell with a primary diagnosis of MASH or only those where this occurred in the first episode. Secondly, do we need to exclude MASH spells that also identify conditions related to alcohol consumption.

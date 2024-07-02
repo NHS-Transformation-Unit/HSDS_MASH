@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# raw data
+data/raw/ncdr_extracts/
+
+# html outputs
+src/outputs/*.html
