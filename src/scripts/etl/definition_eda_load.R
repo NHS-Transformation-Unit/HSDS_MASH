@@ -1,8 +1,8 @@
 
-# Source load extract function --------------------------------------------
+# Load Connection ---------------------------------------------------------
 
-source(paste0(here(), "/src/scripts/etl/load_extracts.R"))
+source(paste0(here(), "/src/config/connection.R"))
 
 # Load Spells data --------------------------------------------------------
 
-spells_df <- load_ncdr_extracts(file_name = "mash_spells.xlsx")
+spells_df <- DBI::dbGetQuery(con, statement = read_file(paste0(here(),"/src/scripts/etl/udal_extracts/mash_spells.sql")))
