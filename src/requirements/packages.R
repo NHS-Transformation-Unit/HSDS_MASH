@@ -2,7 +2,10 @@
 # MASH Definition Analysis ------------------------------------------------
 mash_def_packages <- c("tidyverse",
                        "readxl",
-                       "here")
+                       "here",
+                       "odbc",
+                       "DBI",
+                       "readr")
 
 # load_packages function --------------------------------------------------
 
