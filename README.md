@@ -26,8 +26,6 @@ The current structure of the repository is detailed below:
 ├───.gitignore
 ├───.Rproj
 ├───data
-    ├───raw
-      └───ncdr_extracts
     └───reference
 ├───documentation
     ├───project_documentation
@@ -54,7 +52,6 @@ The current structure of the repository is detailed below:
 - `.gitignore`: Specifies the files and folders that are ignored (not tracked) in the repository.
 - `.Rproj`: The RStudio project file.
 - `data`: Directory for data files used in the analysis
-  - `raw`: Raw data files that are extracted from the National Commissioning Data Repository (NCDR).
   - `reference`: Any reference files such as geospatial datasets or data dictionary files used in the analysis.
 - `documentation`: Additional documentation that is helpful for understanding and replicating analysis and modelling.
 - `images`: Directory containing any logos and other images used in creating outputs for the repository.
