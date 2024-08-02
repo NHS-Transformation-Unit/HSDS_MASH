@@ -7,6 +7,15 @@ mash_def_packages <- c("tidyverse",
                        "DBI",
                        "readr")
 
+
+# MASH Initial Analysis ---------------------------------------------------
+mash_def_packages <- c("tidyverse",
+                       "readxl",
+                       "here",
+                       "odbc",
+                       "DBI",
+                       "readr")
+
 # load_packages function --------------------------------------------------
 
 load_packages <- function(packages){
