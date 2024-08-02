@@ -9,7 +9,7 @@ mash_def_packages <- c("tidyverse",
 
 
 # MASH Initial Analysis ---------------------------------------------------
-mash_def_packages <- c("tidyverse",
+mash_eda_packages <- c("tidyverse",
                        "readxl",
                        "here",
                        "odbc",
