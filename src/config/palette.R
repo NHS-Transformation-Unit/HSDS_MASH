@@ -35,4 +35,4 @@ palette_tu <- c("#40C1AC",
 
 # Select palette ----------------------------------------------------------
 
-palette_region <- palette_tol_regions
+palette_chart <- palette_wong_regions
