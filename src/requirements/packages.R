@@ -14,7 +14,8 @@ mash_eda_packages <- c("tidyverse",
                        "here",
                        "odbc",
                        "DBI",
-                       "readr")
+                       "readr",
+                       "scales")
 
 # load_packages function --------------------------------------------------
 
