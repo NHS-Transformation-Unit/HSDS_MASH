@@ -1,0 +1,147 @@
+---
+title: "Exploratory Data Analysis of MASH Inpatients"
+author: "<a href='https://github.com/ASW-Analyst/'>Andy Wilson</a><br><a href='https://transformationunit.nhs.uk/'>NHS Transformation Unit</a>"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    self-contained: true
+    css: ../config/nhs_tu_theme.css
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  out.width = '100%'
+)
+
+library(here)
+source(paste0(here(), "/src/requirements/packages.R"))
+source(paste0(here(), "/src/requirements/load_packages.R"))
+source(paste0(here(), "/src/config/palette.R"))
+source(paste0(here(), "/src/config/tu_ggplot_themes.R"))
+
+source(paste0(here(), "/src/scripts/etl/spells_eda_load.R"))
+source(paste0(here(), "/src/scripts/etl/eda_dates.R"))
+source(paste0(here(), "/src/scripts/processing/eda.R"))
+
+source(paste0(here(), "/src/scripts/analysis/eda_ip_ts.R"))
+source(paste0(here(), "/src/scripts/analysis/eda_ip_demo.R"))
+
+source(paste0(here(), "/src/scripts/visualisation/eda_ip_ts.R"))
+source(paste0(here(), "/src/scripts/visualisation/eda_ip_demo.R"))
+
+source(paste0(here(), "/src/results/charts/eda.R"))
+source(paste0(here(), "/src/results/tables/eda.R"))
+
+```
+
+# Introduction
+This Exploratory Data Analysis (EDA) focuses on understanding _who_ has been admitted with a MASH diagnosis in recent years and _what_ we can discover from these admissions. MASH admissions have been defined as any admission with a primary diagnosis of either:
+
+- **K740**: _Fatty (change of) liver, not elsewhere classified_
+- **K740**: _Hepatic Fibrosis_
+
+These primary diagnoses can occur anywhere within any episode within the admission spell. This analysis has explored admissions to any provider across England between **`r format(as.Date(dates_in_where_clause[1]), "%d %B %Y")`** and **`r format(as.Date(dates_in_where_clause[2]), "%d %B %Y")`**.
+
+# Analysis
+This analysis has been broken down into the following stages:
+
+- **Time series** analysis showing the recent trends in admissions for MASH.
+- **Admission demographics** analysis to identify the features of patients who are admitted with MASH.
+- **Daycase procedures** analysis to explore the diagnostic procedures patients with MASH undergo within secondary care.
+- **Non-Elective Length of Stay (LOS)** analysis to understand how long patients who are admitted as a Non-Elective remain in hospital.
+
+## Time Series
+
+::: {.callout-tip}
+## Key findings
+
+- Since the omicron wave of the COVID-19 pandemic there appears to be an increasing trend in the number of MASH admissions.
+- This is driven by an increasing trend in both Daycase and Non-Elective admissions.
+:::
+
+The first section of this analysis explores recent trends in admissions for MASH. The chart below shows the number of admissions per month from `r format(as.Date(dates_in_where_clause[1]), "%d %B %Y")` until `r format(as.Date(dates_in_where_clause[2]), "%d %B %Y")`.
+
+```{r ts all}
+
+chart_eda_ip_ts
+
+```
+From this we can see that there appears to be a slight trend in increasing number of admissions each month since the Omicron wave of the COVID-19 pandemic. It is therefore, important to consider if this trend is being driven by a particular type of admission such as Daycases. The Chart below shows the number of admissions each month grouped by the admission type for Daycases, Elective Ordinary, Non-Elective and Regular Day/Night attendances:
+
+```{r ts ag}
+
+chart_eda_ip_ts_ag
+
+```
+
+From this we can see that the overall trend in increasing admissions is reflected for Daycase and Non-Elective admissions.
+
+## Admission Demographics
+::: {.panel-tabset}
+
+### Age
+This section contains a breakdown of the age demographics of those who have been admitted with MASH. The chart below is a histogram showing the distribution of age of those admitted:
+
+```{r demo age hist all}
+
+chart_spells_demo_age_histo
+
+```
+The median age of those admitted with MASH is `r spells_demo_age_stats[[2]]` (IQR `r spells_demo_age_stats[[1]]` - `r spells_demo_age_stats[[3]]`). We can see that the age profile is skewed to older years although there is a small peak of admissions for patients in the early teens. Exploring this by admission type shows that this smaller peak is seen for patients admitted as a Daycase or Ordinary Elective.
+
+```{r demo age hist facet}
+
+chart_spells_demo_age_ag_histo
+
+```
+
+The table below shows a summary of the distribution of the ages of MASH admissions by admission group:
+
+```{r demo age stats table}
+
+table_eda_ip_demo_age_ag
+
+```
+
+### Deprivation
+This section contains a breakdown of the deprivation decile of each MASH admission based on their home postcode. Each Lower Super Output Area (LSOA) is scored based on different subdomains of deprivation such as housing, crime, employment. These are then ranked and ordered into deciles with Decile 1 representing the most deprived population and Decile 10 the least deprived. More information about how deprivation is measured can be found [here](https://www.gov.uk/government/collections/english-indices-of-deprivation).
+
+::: {.callout-warning}
+## IMD Deciles
+It is important to remember that the deprivation decile is based of the characteristics of the population who live in that LSOA so are not necessarily reflective of the socioeconomic status of the individual. 
+:::
+
+The chart below shows the percentage of admissions for MASH for each deprivation decile alongside 95% confidence intervals (calculated via the Wilson method). This demonstrates that a statistically higher proportion of admissions are for those patients in the most deprived deciles.
+
+```{r demo dep chart}
+
+chart_eda_ip_demo_dep
+
+```
+
+```{r demo dep table}
+
+table_eda_ip_demo_dep
+
+```
+
+
+### Co-morbidities
+
+:::
+
+## Procedures
+
+### Primary Procedures - Elective
+
+### All Procedures
+
+## Non-Elective Length of Stay
+
+# Conclusions
