@@ -39,3 +39,14 @@ table_eda_ip_demo_cmb <- spells_demo_cmb_df %>%
   kable_styling() %>%
   row_spec(0, background = palette_nhse[6], color = "white") %>%
   scroll_box(width = "100%", height = "300px")
+
+# Primary Procedures - Daycases -------------------------------------------
+
+table_eda_ip_dc_proc_prim <- spells_dc_proc_prim %>%
+  arrange(desc(Total)) %>%
+  rename("Procedure" = 1,
+         "Primary Procedures" = 2) %>%
+  kable(format = "html", align = "lrr") %>%
+  kable_styling() %>%
+  row_spec(0, background = palette_nhse[6], color = "white") %>%
+  scroll_box(width = "100%", height = "300px")
