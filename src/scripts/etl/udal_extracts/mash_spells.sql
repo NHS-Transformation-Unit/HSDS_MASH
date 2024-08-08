@@ -133,3 +133,4 @@ WHERE APCS.[Admission_Date]
               APCS.[Der_Diagnosis_All] LIKE '%||K760%'
               OR APCS.[Der_Diagnosis_All] LIKE '%||K740%'
           )
+          
