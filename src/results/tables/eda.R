@@ -37,4 +37,5 @@ table_eda_ip_demo_cmb <- spells_demo_cmb_df %>%
          "Percentage of Total Admissions" = 3) %>%
   kable(format = "html", align = "lrr") %>%
   kable_styling() %>%
-  row_spec(0, background = palette_nhse[6], color = "white")
+  row_spec(0, background = palette_nhse[6], color = "white") %>%
+  scroll_box(width = "100%", height = "300px")
