@@ -21,3 +21,23 @@ spells_demo_age_ag_stats <- spells_df_proc %>%
             Median = quantile(Age, probs = 0.50),
             UQ = quantile(Age, probs = 0.75)
   )
+
+
+# Deprivation Decile Demographics -----------------------------------------
+
+# Calculate CIs using Wilson Method
+wilson_ci <- function(num, den, ci_level = 0.95){
+  
+  result <- binom.confint(x = num, n = den, methods = "wilson", conf.level = ci_level)
+  return(result)
+  
+}
+
+spells_demo_dep_df <- spells_df_proc %>%
+  group_by(IMD_Decile) %>%
+  summarise(Total = n()) %>%
+  mutate(Prop = Total/sum(Total, na.rm = TRUE),
+         GT = sum(Total, na.rm = TRUE)) %>%
+  rowwise() %>%
+  mutate(ci = list(wilson_ci(Total, GT))) %>%
+  unnest(cols = ci)
