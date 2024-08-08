@@ -52,3 +52,19 @@ chart_spells_demo_age_ag_histo <- spells_df_proc %>%
        subtitle = "By Admission Group",
        caption = "Source: SUS APCS (Admitted Patient Care - Spells)") +
   selected_theme(hex_col = palette_nhse[6])
+
+
+# Deprivation -------------------------------------------------------------
+
+chart_spells_demo_dep <- spells_demo_dep_df %>%
+  ggplot(aes(x = IMD_Decile, y = Prop)) +
+  geom_bar(stat = "identity", fill = palette_chart[5], alpha = 0.5, col = "black") +
+  scale_y_continuous(label = percent, breaks = seq(0, 0.2, by = 0.02)) +
+  geom_hline(yintercept = 0.10, col = palette_nhse[1], linetype = "dashed") +
+  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.2) +
+  labs(x = "IMD Decile",
+       y = "Percentage of Admissions",
+       title = "Distribution of MASH Admissions by Deprivation Decile",
+       subtitle = "IMD 2019 Deciles",
+       caption = "Source: SUS APCS(Admitted Patient Care - Spells)") +
+  selected_theme(hex_col = palette_nhse[6])
