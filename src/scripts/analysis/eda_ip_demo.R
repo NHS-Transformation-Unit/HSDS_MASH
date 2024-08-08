@@ -41,3 +41,47 @@ spells_demo_dep_df <- spells_df_proc %>%
   rowwise() %>%
   mutate(ci = list(wilson_ci(Total, GT))) %>%
   unnest(cols = ci)
+
+
+# Comorbidities -----------------------------------------------------------
+
+spells_demo_cmb_df <- spells_df_proc %>%
+  mutate(Group = "All") %>%
+  group_by(Group) %>%
+  summarise(CC_AMI = sum(CC_AMI_Flag),
+            CC_CVA = sum(CC_CVA_Flag),
+            CC_CHF = sum(CC_CHF_Flag),
+            CC_CTD = sum(CC_CTD_Flag),
+            CC_DEM = sum(CC_DEM_Flag),
+            CC_DIA = sum(CC_DIA_Flag),
+            #CC_LIV = sum(CC_LIV_Flag),
+            CC_PEP = sum(CC_PEP_Flag),
+            CC_PVD = sum(CC_PVD_Flag),
+            CC_PUL = sum(CC_PUL_Flag),
+            CC_CAN = sum(CC_CAN_Flag),
+            CC_DIACOM = sum(CC_DIACOM_Flag),
+            CC_PARA = sum(CC_PARA_Flag),
+            CC_REN = sum(CC_REN_Flag),
+            CC_METC = sum(CC_METC_Flag),
+            CC_SLD = sum(CC_SLD_Flag),
+            CC_HIV = sum(CC_HIV_Flag)) %>%
+  gather("Comorbidity", "Total", -c(1)) %>%
+  mutate("Comorbidity_Name" = case_when(Comorbidity == "CC_AMI" ~ "Acute Myocardial Infarction",
+                                        Comorbidity == "CC_CVA" ~ "Cerebral Vascular Accident",
+                                        Comorbidity == "CC_CHF" ~ "Congestive Heart Failure",
+                                        Comorbidity == "CC_CTD" ~ "Connective Tissue Disorder",
+                                        Comorbidity == "CC_DEM" ~ "Dementia",
+                                        Comorbidity == "CC_DIA" ~ "Diabetes",
+                                        Comorbidity == "CC_PEP" ~ "Peptic Ulcer",
+                                        Comorbidity == "CC_PVD" ~ "Peripheral Vascular Disease",
+                                        Comorbidity == "CC_PUL" ~ "Pulmonary Disease",
+                                        Comorbidity == "CC_CAN" ~ "Cancer",
+                                        Comorbidity == "CC_DIACOM" ~ "Diabetes Complications",
+                                        Comorbidity == "CC_PARA" ~ "Paraplegia",
+                                        Comorbidity == "CC_REN" ~ "Renal Disease",
+                                        Comorbidity == "CC_METC" ~ "Metastatic Cancer",
+                                        Comorbidity == "CC_SLD" ~ "Severe Liver Disease",
+                                        Comorbidity == "CC_HIV" ~ "HIV")) %>%
+  mutate(Total_Spells = nrow(spells_df_proc),
+         Prop = Total/Total_Spells)
+  

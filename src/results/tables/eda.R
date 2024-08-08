@@ -10,7 +10,6 @@ table_eda_ip_demo_age_ag <- spells_demo_age_ag_stats %>%
   kable_styling() %>%
   row_spec(0, background = palette_nhse[6], color = "white")
 
-
 # Dep Stats ---------------------------------------------------------------
 
 table_eda_ip_demo_dep <- spells_demo_dep_df %>%
@@ -26,4 +25,16 @@ table_eda_ip_demo_dep <- spells_demo_dep_df %>%
   kable(format = "html", align = "lrrrr") %>%
   kable_styling() %>%
   row_spec(0, background = palette_nhse[6], color = "white")
-  
+
+# Comorbidity Stats -------------------------------------------------------
+
+table_eda_ip_demo_cmb <- spells_demo_cmb_df %>%
+  select(c(4,3,6)) %>%
+  mutate(Prop = scales::percent(Prop, accuracy = 0.01)) %>%
+  arrange(desc(Total)) %>%
+  rename("Charlson Co-morbidity" = 1,
+         "Admissions" = 2,
+         "Percentage of Total Admissions" = 3) %>%
+  kable(format = "html", align = "lrr") %>%
+  kable_styling() %>%
+  row_spec(0, background = palette_nhse[6], color = "white")
