@@ -41,7 +41,7 @@ The current structure of the repository is detailed below:
     └───scripts
       ├───analysis
       ├───etl
-        └───ncdr_extracts
+        └───udal_extracts
       ├───processing
       └───visualisation
     
