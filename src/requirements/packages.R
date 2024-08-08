@@ -15,7 +15,9 @@ mash_eda_packages <- c("tidyverse",
                        "odbc",
                        "DBI",
                        "readr",
-                       "scales")
+                       "scales",
+                       "kableExtra",
+                       "binom")
 
 # load_packages function --------------------------------------------------
 
