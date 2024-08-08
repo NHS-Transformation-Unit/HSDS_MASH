@@ -20,5 +20,7 @@ spells_df_proc <- spells_df %>%
                                Age < 70 ~ "60-69",
                                Age < 80 ~ "70-79",
                                Age < 90 ~ "80-89",
-                               TRUE ~ "90+")
+                               TRUE ~ "90+"),
+         IMD_Decile = factor(IMD_Decile, levels = c("1", "2", "3", "4", "5",
+                                                    "6", "7", "8", "9", "10"))
   )
