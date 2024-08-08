@@ -5,3 +5,5 @@ chart_eda_ip_demo_age <- chart_spells_demo_age_histo
 chart_eda_ip_demo_age_ag <- chart_spells_demo_age_ag_histo
 
 chart_eda_ip_demo_dep <- chart_spells_demo_dep
+
+chart_eda_ip_nel_los_1p <- chart_spells_nel_los_1p_histo
