@@ -9,7 +9,7 @@ chart_spells_ts <- spells_ts_df %>%
        y = "Number of Spells",
        title = "MASH Identified Hospital Admissions",
        subtitle = "All Admission Types",
-       caption = "Source: SUS APCS (Admitted Patient Care - Spells") +
+       caption = "Source: SUS APCS (Admitted Patient Care - Spells)") +
   selected_theme(hex_col = palette_nhse[6])
 
 chart_spells_ts_ag <- spells_ts_ag_df %>%
@@ -21,6 +21,6 @@ chart_spells_ts_ag <- spells_ts_ag_df %>%
   labs(x = "Admission Month",
        y = "Number of Spells",
        title = "MASH Identified Hospital Admissions",
-       subtitle = "All Admission Types",
-       caption = "Source: SUS APCS (Admitted Patient Care - Spells") +
+       subtitle = "By Admission Type",
+       caption = "Source: SUS APCS (Admitted Patient Care - Spells)") +
   selected_theme(hex_col = palette_nhse[6])
