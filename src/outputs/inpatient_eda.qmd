@@ -57,7 +57,7 @@ htmltools::img(src = knitr::image_uri(paste0(here(), "/images/nhse_logo.png")),
 # Introduction
 This Exploratory Data Analysis (EDA) focuses on understanding _who_ has been admitted with a MASH diagnosis in recent years and _what_ we can discover from these admissions. MASH admissions have been defined as any admission with a primary diagnosis of either:
 
-- **K740**: _Fatty (change of) liver, not elsewhere classified_
+- **K760**: _Fatty (change of) liver, not elsewhere classified_
 - **K740**: _Hepatic Fibrosis_
 
 These primary diagnoses can occur anywhere within any episode within the admission spell. This analysis has explored admissions to any provider across England between **`r format(as.Date(dates_in_where_clause[1]), "%d %B %Y")`** and **`r format(as.Date(dates_in_where_clause[2]), "%d %B %Y")`**.
