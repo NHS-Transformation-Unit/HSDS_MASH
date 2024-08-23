@@ -19,6 +19,31 @@ mash_eda_packages <- c("tidyverse",
                        "kableExtra",
                        "binom")
 
+# MASH OP Initial Analysis ------------------------------------------------
+
+mash_eda_op_packages <- c("tidyverse",
+                       "readxl",
+                       "here",
+                       "odbc",
+                       "DBI",
+                       "readr",
+                       "scales",
+                       "kableExtra",
+                       "binom")
+
+
+# MASH MPI Analysis -------------------------------------------------------
+
+mash_mpi_packages <- c("tidyverse",
+                       "readxl",
+                       "here",
+                       "odbc",
+                       "DBI",
+                       "readr",
+                       "scales",
+                       "kableExtra",
+                       "binom")
+
 # load_packages function --------------------------------------------------
 
 load_packages <- function(packages){
