@@ -1,0 +1,72 @@
+---
+title: "Exploratory Data Analysis of MASH Outpatient Procedures"
+author: "<a href='https://github.com/ASW-Analyst/'>Andy Wilson</a><br><a href='https://transformationunit.nhs.uk/'>NHS Transformation Unit</a>"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    self-contained: true
+    css: ../config/nhse_theme.css
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  out.width = '100%'
+)
+
+library(here)
+source(paste0(here(), "/src/requirements/packages.R"))
+source(paste0(here(), "/src/requirements/load_packages.R"))
+source(paste0(here(), "/src/config/palette.R"))
+
+source(paste0(here(), "/src/scripts/etl/opa_eda_load.R"))
+source(paste0(here(), "/src/scripts/etl/eda_dates.R"))
+source(paste0(here(), "/src/scripts/processing/eda_op.R"))
+
+source(paste0(here(), "/src/scripts/analysis/eda_op_proc.R"))
+
+source(paste0(here(), "/src/results/tables/eda_op.R"))
+
+```
+
+```{r logo, echo = FALSE}
+
+htmltools::img(src = knitr::image_uri(paste0(here(), "/images/nhse_logo.png")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:5%; padding:10px;',
+               width = "180px",
+               heigth = "180px")
+
+```
+
+# Introduction
+This Exploratory Data Analysis (EDA) focuses on understanding the procedures that have been undertaken for patients with a MASH diagnosis. Similarly to the inpatients analysis this is classified as a primary diagnosis recorded at outpatient attendance of:
+
+- **K760**: _Fatty (change of) liver, not elsewhere classified_
+- **K740**: _Hepatic Fibrosis_
+
+This analysis has explored appointments at any provider across England between **`r format(as.Date(dates_in_where_clause_op[1]), "%d %B %Y")`** and **`r format(as.Date(dates_in_where_clause_op[2]), "%d %B %Y")`**.
+
+# Procedures
+
+::: {.callout-tip}
+## Key findings
+
+- `r round(opa_types[[3,3]] *100, 2)`% of appointments recorded a procedure.
+- Ultrasound Elastography was the most common procedure undertaken at outpatient appointment.
+:::
+
+There was a total of `r comma(sum(opa_types$Total))` appointments that were attended by a patient diagnoses with MASH. Of these `r round(opa_types[[2,3]] *100, 2)`% had no procedure codes recorded. Therefore, it is difficult to draw robust conclusions as to whether any of these appointments had a procedure. `r round(opa_types[[3,3]] *100, 2)`% of appointments had an OPCS code recorded that confirmed some form of procedure undertaken.
+
+The table below shows a the volume of each procedure undertaken in an outpatient setting for those with more than 10 procedures recorded in total:
+
+```{r procs table}
+
+table_eda_op_procs
+
+```
