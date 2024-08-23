@@ -1,4 +1,5 @@
 SELECT APCS.[APCS_Ident],
+       APCS.[Der_Pseudo_NHS_Number],
        APCS.[Admission_Date],
        APCS.[Discharge_Date],
 	   APCS.[Der_Age_at_CDS_Activity_Date] AS [Age],
