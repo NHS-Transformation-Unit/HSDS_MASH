@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.8" pages="4">
   <diagram name="Pathway to Dataset Linkage" id="lbc7I5TqHCNopYPHcyNA">
     <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-58" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9673a6;strokeWidth=2;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="20" y="100" width="700" height="600" as="geometry" />
+          <mxGeometry x="20" y="100" width="420" height="600" as="geometry" />
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;dashPattern=8 8;strokeWidth=2;perimeterSpacing=0;" parent="1" vertex="1">
           <mxGeometry x="780" y="100" width="860" height="880" as="geometry" />
@@ -52,8 +52,8 @@
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-32" value="Secondary Care" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1280" y="110" width="340" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="fgwe2LLAMzm8-ZmP73Av-33" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;MASH Patient Pathway to Dataset Linkage&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="20" y="10" width="550" height="40" as="geometry" />
+        <mxCell id="fgwe2LLAMzm8-ZmP73Av-33" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;MASLD/ MASH Patient Pathway to Dataset Linkage&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="10" width="680" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-36" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="800" y="150" width="320" height="190" as="geometry" />
@@ -67,7 +67,7 @@
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-34" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="fgwe2LLAMzm8-ZmP73Av-36" vertex="1">
           <mxGeometry x="283" y="4" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fgwe2LLAMzm8-ZmP73Av-37" value="" style="group" parent="1" vertex="1" connectable="0">
+        <mxCell id="fgwe2LLAMzm8-ZmP73Av-37" value="" style="group;fontStyle=1" parent="1" vertex="1" connectable="0">
           <mxGeometry x="900" y="430" width="320" height="190" as="geometry" />
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-8" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" parent="fgwe2LLAMzm8-ZmP73Av-37" vertex="1" connectable="0">
@@ -100,13 +100,13 @@
         <mxCell id="qsQuDJ6OWMMAQAVgBcdS-4" value="None Identified" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="fgwe2LLAMzm8-ZmP73Av-47" vertex="1">
           <mxGeometry x="63" y="90" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fgwe2LLAMzm8-ZmP73Av-51" value="" style="group;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="270" y="430" width="320" height="190" as="geometry" />
+        <mxCell id="fgwe2LLAMzm8-ZmP73Av-51" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="50" y="430" width="320" height="190" as="geometry" />
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-52" value="&lt;b&gt;Medicines in Primary Care&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="fgwe2LLAMzm8-ZmP73Av-51" vertex="1">
           <mxGeometry width="320" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="fgwe2LLAMzm8-ZmP73Av-53" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="fgwe2LLAMzm8-ZmP73Av-51" vertex="1">
+        <mxCell id="fgwe2LLAMzm8-ZmP73Av-53" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="fgwe2LLAMzm8-ZmP73Av-51" vertex="1">
           <mxGeometry x="283" y="4" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-54" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Prescription&lt;/li&gt;&lt;li&gt;Items dispensed&lt;/li&gt;&lt;li&gt;Month of prescription&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="fgwe2LLAMzm8-ZmP73Av-51" vertex="1">
@@ -121,7 +121,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="fgwe2LLAMzm8-ZmP73Av-59" value="Primary Care" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="370" y="110" width="340" height="40" as="geometry" />
+          <mxGeometry x="50" y="110" width="340" height="40" as="geometry" />
         </mxCell>
         <mxCell id="qsQuDJ6OWMMAQAVgBcdS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;dashed=1;strokeColor=#c11033;" parent="1" source="fgwe2LLAMzm8-ZmP73Av-3" target="fgwe2LLAMzm8-ZmP73Av-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -130,6 +130,299 @@
           <mxGeometry x="-0.0444" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-1" value="" style="group;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="450" y="370" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-2" value="&lt;b&gt;Master Patient Index&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="ZmzaQ_2c2ku6jkDgN2iz-1">
+          <mxGeometry width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="ZmzaQ_2c2ku6jkDgN2iz-1">
+          <mxGeometry x="283" y="1.89" width="28.11" height="28.11" as="geometry" />
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-5" value="Der_Pseudo_&lt;div&gt;NHS_Number&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;fontStyle=1" edge="1" parent="1" source="ZmzaQ_2c2ku6jkDgN2iz-2" target="fgwe2LLAMzm8-ZmP73Av-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-7" value="Der_Pseudo_&lt;div&gt;NHS_Number&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="ZmzaQ_2c2ku6jkDgN2iz-2" target="fgwe2LLAMzm8-ZmP73Av-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZmzaQ_2c2ku6jkDgN2iz-9" value="Der_Pseudo_NHS_Number" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.468;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;shape=link;fontStyle=1" edge="1" parent="1" source="ZmzaQ_2c2ku6jkDgN2iz-2" target="fgwe2LLAMzm8-ZmP73Av-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-1" value="Der_Pseudo_NHS_Number" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.563;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.803;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;shape=link;fontStyle=1" edge="1" parent="1" source="ZmzaQ_2c2ku6jkDgN2iz-2" target="fgwe2LLAMzm8-ZmP73Av-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-7" value="Dataset identified and permissions obtained" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-9" value="Dataset identified and permissions obtained but not linkable" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1050" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-11" value="Dataset identified, permissions not approved" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1250" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1425" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dAT2GMvOv41I6alllOmB-16" value="No available dataset" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1465" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="646SPno2Q0wXklzElMc7" name="Full Data Linkage">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-5" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="0IBaKcK-OtIXZ0vusKVw-1" target="HhlPlhYFVKjOH9OH2-Fi-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-6" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;shape=link;" edge="1" parent="1" source="0IBaKcK-OtIXZ0vusKVw-1" target="wpGCo7jPL-vsn_Qeh8ko-2">
+          <mxGeometry x="-0.1111" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-7" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;shape=link;" edge="1" parent="1" source="0IBaKcK-OtIXZ0vusKVw-1" target="Y9HqDyw9O5mmAGIMDjA5-2">
+          <mxGeometry x="-0.1392" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5GEaIDxdIwUj5i7MX9MD-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.869;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;shape=link;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="395" as="sourcePoint" />
+            <mxPoint x="199.03999999999996" y="308.04999999999995" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5GEaIDxdIwUj5i7MX9MD-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="0IBaKcK-OtIXZ0vusKVw-1" target="GBjnQ5oky7-OmI0cLBlj-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5GEaIDxdIwUj5i7MX9MD-5" value="Unique Patient ID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5GEaIDxdIwUj5i7MX9MD-4">
+          <mxGeometry x="-0.2052" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0IBaKcK-OtIXZ0vusKVw-1" value="Master Patient Index&lt;div&gt;- &lt;span style=&quot;font-weight: normal;&quot;&gt;Demographics&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;- Registered Practice&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;- Location&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="480" y="340" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HhlPlhYFVKjOH9OH2-Fi-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="760" y="300" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="HhlPlhYFVKjOH9OH2-Fi-2" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" vertex="1" connectable="0" parent="HhlPlhYFVKjOH9OH2-Fi-1">
+          <mxGeometry width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="HhlPlhYFVKjOH9OH2-Fi-3" value="&lt;div&gt;&lt;b&gt;Admitted Patient Care&lt;/b&gt;&lt;/div&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="HhlPlhYFVKjOH9OH2-Fi-1">
+          <mxGeometry width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="HhlPlhYFVKjOH9OH2-Fi-5" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;Admission Method&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Demographics&lt;/li&gt;&lt;li&gt;Comorbidities&lt;/li&gt;&lt;li&gt;Diagnoses&lt;/li&gt;&lt;li&gt;Procedures&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="HhlPlhYFVKjOH9OH2-Fi-1">
+          <mxGeometry x="20" y="40" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="wpGCo7jPL-vsn_Qeh8ko-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="760" y="40" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="wpGCo7jPL-vsn_Qeh8ko-2" value="&lt;div&gt;&lt;b&gt;Outpatient Appointments&lt;/b&gt;&lt;/div&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="wpGCo7jPL-vsn_Qeh8ko-1">
+          <mxGeometry width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="wpGCo7jPL-vsn_Qeh8ko-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;Attendance Status&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Procedures&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Referral Source&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;Diagnosis&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Specialty/&lt;/span&gt;Treatment Function&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="wpGCo7jPL-vsn_Qeh8ko-1">
+          <mxGeometry x="20" y="40" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="760" y="550" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-2" value="&lt;b&gt;Emergency Care (ED) Presentations&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="Y9HqDyw9O5mmAGIMDjA5-1">
+          <mxGeometry width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Y9HqDyw9O5mmAGIMDjA5-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;Presenting complaint&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Demographics&lt;/li&gt;&lt;li&gt;Comorbidities&lt;/li&gt;&lt;li&gt;Diagnoses&lt;/li&gt;&lt;li&gt;Investigations&lt;/li&gt;&lt;li&gt;Waiting Times&lt;/li&gt;&lt;li&gt;Arrival Method&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="Y9HqDyw9O5mmAGIMDjA5-1">
+          <mxGeometry x="20" y="40" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zob7PXyAYwCOON_e2BeC-1" value="&lt;b&gt;Diagnostic Imaging&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="300" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="22tIml-ci2gWaYfhP5f6-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Investigations&lt;/li&gt;&lt;li&gt;Modalities&lt;/li&gt;&lt;li&gt;Body area&lt;/li&gt;&lt;li&gt;Reporting&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="340" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="22tIml-ci2gWaYfhP5f6-2" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="wpGCo7jPL-vsn_Qeh8ko-2" target="zob7PXyAYwCOON_e2BeC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22tIml-ci2gWaYfhP5f6-3" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="HhlPlhYFVKjOH9OH2-Fi-3" target="zob7PXyAYwCOON_e2BeC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22tIml-ci2gWaYfhP5f6-4" value="Unique Patient ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="Y9HqDyw9O5mmAGIMDjA5-2" target="zob7PXyAYwCOON_e2BeC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GBjnQ5oky7-OmI0cLBlj-1" value="" style="group;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="40" y="500" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GBjnQ5oky7-OmI0cLBlj-2" value="&lt;b&gt;Prescriptions&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="GBjnQ5oky7-OmI0cLBlj-1">
+          <mxGeometry width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GBjnQ5oky7-OmI0cLBlj-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Prescription&lt;/li&gt;&lt;li&gt;Items dispensed&lt;/li&gt;&lt;li&gt;Month of prescription&lt;/li&gt;&lt;li&gt;Care setting&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="GBjnQ5oky7-OmI0cLBlj-1">
+          <mxGeometry x="20" y="40" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="5GEaIDxdIwUj5i7MX9MD-1" value="&lt;b&gt;Primary Care&lt;/b&gt;" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;verticalAlign=top;dx=20;dy=40;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="5GEaIDxdIwUj5i7MX9MD-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Features&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Appointments&lt;/li&gt;&lt;li&gt;Symptoms&lt;/li&gt;&lt;li&gt;Presenting Complaints&lt;/li&gt;&lt;li&gt;Investigations&lt;/li&gt;&lt;li&gt;Treatments&lt;/li&gt;&lt;li&gt;Diagnoses&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="160" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UHJhsp6BBHzz0OPFVh_w" name="Example Pathway">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aZ5HivIF102kJWWnqCLE-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-1" target="aZ5HivIF102kJWWnqCLE-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-1" value="GP Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="120" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-2" value="Presenting complaints&lt;div&gt;Investigations requested&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-5" target="aZ5HivIF102kJWWnqCLE-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-5" value="LFTs" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-6" target="aZ5HivIF102kJWWnqCLE-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-6" value="GP Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-7" target="aZ5HivIF102kJWWnqCLE-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-7" value="Hepatology Outpatient Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="787" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-10" target="aZ5HivIF102kJWWnqCLE-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-10" value="Hepatology Outpatient Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1153" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-18" value="TIme" style="endArrow=classic;html=1;rounded=0;fontStyle=1;fontSize=15;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="310" as="sourcePoint" />
+            <mxPoint x="1240" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-22" value="Results" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-24" value="Initial Diagnosis&lt;div&gt;Referral to Secondary Care&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aZ5HivIF102kJWWnqCLE-26" target="aZ5HivIF102kJWWnqCLE-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-26" value="Daycase Admission: Liver Biopsy" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="953" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-27" value="Listed for Daycase procedure - Liver biopsy" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="767" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-29" value="Biopsy undertaken" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="933" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-31" value="Formal diagnosis with patient" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1133" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aZ5HivIF102kJWWnqCLE-33" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Example Diagnostic Pathway&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="10" width="280" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="UDAL Example Pathway" id="P9dV_KNNPkUkVYE1KpKf">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-0" />
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-1" parent="DYdd_3H4_RZT3NiGW1af-0" />
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-3" target="DYdd_3H4_RZT3NiGW1af-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-3" value="GP Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="120" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-4" value="Presenting complaints&lt;div&gt;Investigations requested&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="100" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-6" target="DYdd_3H4_RZT3NiGW1af-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-6" value="LFTs" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="270" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-8" target="DYdd_3H4_RZT3NiGW1af-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-8" value="GP Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="400" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-10" target="DYdd_3H4_RZT3NiGW1af-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-10" value="Hepatology Outpatient Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="787" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-12" target="DYdd_3H4_RZT3NiGW1af-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-12" value="Hepatology Outpatient Appointment" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="1153" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-13" value="TIme" style="endArrow=classic;html=1;rounded=0;fontStyle=1;fontSize=15;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="310" as="sourcePoint" />
+            <mxPoint x="1240" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-14" value="Results" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="250" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Sb_Kk-rfK5J-hzPPfJzB-0" value="Referral Date Inferred from Outpatient Data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-15" target="DYdd_3H4_RZT3NiGW1af-10">
+          <mxGeometry x="0.3098" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-15" value="Initial Diagnosis&lt;div&gt;Referral to Secondary Care&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="380" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="DYdd_3H4_RZT3NiGW1af-1" source="DYdd_3H4_RZT3NiGW1af-17" target="DYdd_3H4_RZT3NiGW1af-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-17" value="Daycase Admission: Liver Biopsy" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="953" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-18" value="Listed for Daycase procedure - Liver biopsy" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="767" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-19" value="Biopsy undertaken" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="933" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-20" value="Formal diagnosis with patient" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="1133" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DYdd_3H4_RZT3NiGW1af-21" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Example Diagnostic Pathway&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="DYdd_3H4_RZT3NiGW1af-1">
+          <mxGeometry x="100" y="10" width="280" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
