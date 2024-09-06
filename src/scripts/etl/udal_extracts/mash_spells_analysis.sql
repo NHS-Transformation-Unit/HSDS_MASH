@@ -380,7 +380,23 @@ SELECT APCS.[APCS_Ident],
 				1
 			ELSE
 				0
-		END AS [CC_HIV_Flag]
+		END AS [CC_HIV_Flag],
+		CASE
+		   WHEN
+		   (
+				APCS.[Der_Diagnosis_All] LIKE '%,K741%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K742%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K743%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K744%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K745%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K746%'
+			) THEN
+				1
+			ELSE
+				0
+			END AS [LC_Flag]
+
+
 FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
     LEFT JOIN [UKHD_Data_Dictionary].[Ethnic_Category_Code_SCD] AS [ETH]
         ON APCS.[Ethnic_Group] = ETH.[Main_Code_Text]

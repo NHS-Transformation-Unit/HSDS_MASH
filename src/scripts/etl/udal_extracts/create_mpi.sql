@@ -397,6 +397,21 @@ SELECT APCS.[APCS_Ident],
 			ELSE
 				0
 		END AS [CC_HIV_Flag],
+		CASE
+		   WHEN
+		   (
+				APCS.[Der_Diagnosis_All] LIKE '%,K741%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K742%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K743%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K744%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K745%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K746%'
+			) THEN
+				1
+			ELSE
+				0
+			END AS [LC_Flag],
+		
 		ROW_NUMBER() OVER (PARTITION BY APCS.[Der_Pseudo_NHS_Number] ORDER BY APCS.[Admission_Date]) AS [Der_First_Adm]
 INTO #AdmAll
 FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
@@ -496,6 +511,7 @@ SELECT OPA.[Der_Pseudo_NHS_Number],
 	   LEFT(OPA.[Der_Diagnosis_All], 4) as [PrimDiag],
 	   LEFT(OPA.[Der_Procedure_All], 4) as [PrimProc],
 	   OPCS.[Title] as [OPCS_Desc],
+	   
 	   ROW_NUMBER() OVER (PARTITION BY OPA.[Der_Pseudo_NHS_Number] ORDER BY OPA.[Appointment_Date]) AS [Der_First_OPA]
 INTO #OPAAll
 FROM [SUS_OPA].[OPA_Core] AS [OPA]
@@ -979,6 +995,20 @@ SELECT APCS.[APCS_Ident],
 			ELSE
 				0
 		END AS [CC_HIV_Flag],
+		CASE
+		   WHEN
+		   (
+				APCS.[Der_Diagnosis_All] LIKE '%,K741%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K742%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K743%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K744%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K745%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K746%'
+			) THEN
+				1
+			ELSE
+				0
+			END AS [LC_Flag],
 		ROW_NUMBER() OVER (PARTITION BY APCS.[Der_Pseudo_NHS_Number] ORDER BY APCS.[Admission_Date]) AS [Der_First_Adm]
 INTO #Adm
 FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
