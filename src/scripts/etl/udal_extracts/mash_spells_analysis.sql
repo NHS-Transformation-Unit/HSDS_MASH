@@ -397,7 +397,7 @@ SELECT APCS.[APCS_Ident],
 			END AS [LC_Flag]
 
 
-FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
+FROM [SUS_APC].[APCS_Core_Monthly_Historic] AS [APCS]
     LEFT JOIN [UKHD_Data_Dictionary].[Ethnic_Category_Code_SCD] AS [ETH]
         ON APCS.[Ethnic_Group] = ETH.[Main_Code_Text]
            AND ETH.[Is_Latest] = 1

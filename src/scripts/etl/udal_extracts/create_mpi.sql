@@ -414,7 +414,7 @@ SELECT APCS.[APCS_Ident],
 		
 		ROW_NUMBER() OVER (PARTITION BY APCS.[Der_Pseudo_NHS_Number] ORDER BY APCS.[Admission_Date]) AS [Der_First_Adm]
 INTO #AdmAll
-FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
+FROM [SUS_APC].[APCS_Core_Monthly_Historic] AS [APCS]
     LEFT JOIN [UKHD_Data_Dictionary].[Ethnic_Category_Code_SCD] AS [ETH]
         ON APCS.[Ethnic_Group] = ETH.[Main_Code_Text]
            AND ETH.[Is_Latest] = 1
@@ -471,6 +471,7 @@ WHERE APCS.[Admission_Date]
       AND (
               APCS.[Der_Diagnosis_All] LIKE '%||K760%'
               OR APCS.[Der_Diagnosis_All] LIKE '%||K740%'
+              OR APCS.[Der_Diagnosis_All] LIKE '%||K758%'
           )
 	 AND APCS.[Der_Pseudo_NHS_Number] IS NOT NULL
 
@@ -571,6 +572,7 @@ AND OPCS.[Effective_To] IS NULL
 
 WHERE OPA.[Appointment_Date] BETWEEN '2019-04-01' AND '2024-03-31'
 AND (OPA.[Der_Diagnosis_All] LIKE 'K740%' OR
+     OPA.[Der_Diagnosis_All] LIKE 'K758%' OR
 	 OPA.[Der_Diagnosis_All] LIKE 'K760%')
 AND OPA.[Der_Pseudo_NHS_Number] IS NOT NULL
 
@@ -1011,7 +1013,7 @@ SELECT APCS.[APCS_Ident],
 			END AS [LC_Flag],
 		ROW_NUMBER() OVER (PARTITION BY APCS.[Der_Pseudo_NHS_Number] ORDER BY APCS.[Admission_Date]) AS [Der_First_Adm]
 INTO #Adm
-FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
+FROM [SUS_APC].[APCS_Core_Monthly_Historic] AS [APCS]
     LEFT JOIN [UKHD_Data_Dictionary].[Ethnic_Category_Code_SCD] AS [ETH]
         ON APCS.[Ethnic_Group] = ETH.[Main_Code_Text]
            AND ETH.[Is_Latest] = 1
@@ -1068,6 +1070,7 @@ WHERE APCS.[Der_Pseudo_NHS_Number] IN (SELECT [Der_Pseudo_NHS_Number]
 
 AND (     APCS.[Der_Diagnosis_All] LIKE '%||K760%'
               OR APCS.[Der_Diagnosis_All] LIKE '%||K740%'
+              OR APCS.[Der_Diagnosis_All] LIKE '%||K758%'
           )
 
 -- ===========================================================
@@ -1167,4 +1170,5 @@ AND OPCS.[Effective_To] IS NULL
 WHERE OPA.[Der_Pseudo_NHS_Number] IN  (SELECT [Der_Pseudo_NHS_Number]
 									   FROM #mpi_initial)
 AND (OPA.[Der_Diagnosis_All] LIKE 'K740%' OR
+OPA.[Der_Diagnosis_All] LIKE 'K758%' OR
 	 OPA.[Der_Diagnosis_All] LIKE 'K760%')
