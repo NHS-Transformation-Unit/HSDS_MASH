@@ -42,7 +42,8 @@ mash_mpi_packages <- c("tidyverse",
                        "readr",
                        "scales",
                        "kableExtra",
-                       "binom")
+                       "binom",
+                       "ggrepel")
 
 # load_packages function --------------------------------------------------
 
