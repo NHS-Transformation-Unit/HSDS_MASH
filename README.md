@@ -22,11 +22,13 @@ The current structure of the repository is detailed below:
 ├───.gitignore
 ├───.Rproj
 ├───data
-    └───reference
+    ├───raw
+    ├───reference
+    └───theograph
 ├───documentation
-    ├───project_documentation
-    └───guidance
+    └───project_documentation
 ├───images
+    └───theograph_example
 └───src
     ├───config
     ├───outputs
