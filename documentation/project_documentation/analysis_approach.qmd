@@ -1,0 +1,128 @@
+---
+title: "Analysis Approach for Mapping MASLD/MASH Pathway Activities"
+author: "<a href='https://github.com/ASW-Analyst/'>Andy Wilson</a><br><a href='https://transformationunit.nhs.uk/'>NHS Transformation Unit</a>"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    self-contained: true
+    css: ../src/config/nhse_theme.css
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  out.width = '100%'
+)
+
+```
+
+```{r logo, echo = FALSE}
+
+library(here)
+htmltools::img(src = knitr::image_uri(paste0(here(), "/images/nhse_logo.png")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:5%; padding:10px;',
+               width = "180px",
+               heigth = "180px")
+
+```
+
+# Executive Summary
+
+::: {.callout-tip}
+## Key Points
+
+- This document provides an overview of the methodology for analysing the MASLD/MASH diagnostic pathway.
+- Due to the unavailability of any primary care datasets this methodology focuses on the Secondary Care aspects of the pathway.
+:::
+
+***
+
+# Current Data Landscape
+To undertake this mapping it is critical to understand the datasets that are available for the project. For the analysis to be repeatable and transparent it will be undertaken within the **Unified Data Access Layer** (UDAL) environment, operated by NHS England. UDAL is a secure data environment created for analysts within NHS England and Commissioning Support Units (CSUs) to undertake analysis and modelling on routinely collected datasets. Therefore, we have undertaken a review of available datasets within UDAL to explore:
+
+* What datasets exist that capture activities along the pathway?
+* How can different datasets be linked together to identify steps along the patient journey?
+* How are we able to identify if a patient has a MASLD/MASH diagnosis within these datasets?
+
+## UDAL Dataset Relationships
+The figure below shows key datasets that we have identified as potentially being helpful for understanding a patient's diagnostic pathway. The ability to link information about a patient in one dataset to information about the same patient in another have been highlighted. Typically, this is achieved through linking patients through a *pseudonymised NHS Number*.
+
+![UDAL Dataset Linkage](../images/dataset_pathway_linkage.drawio.svg)
+From the mapping of available datasets there are two key points to note:
+
+* There is no **primary care data extract** available in UDAL. To map primary care activities and analyse issues such as presenting symptoms we would require an extract of primary care data that can be linked to either the Master Patient Index (MPI) or the other secondary care datasets. Therefore, the analysis of the pathway will have to focus on the secondary care elements only.
+
+* There is **no consistent** patient identifier that can be used to join the Diagnostic Imaging Dataset with other secondary care datasets. Therefore, for the purposes of analysing diagnostic imaging undertaken within secondary care this will be based of procedures recorded within the Admitted Patient Care, Outpatients or the Emergency Care Dataset (ECDS).
+
+<br/>
+
+# Defining the Patient Population
+
+## Starting Definition
+At the start of this project we have been provided with a working definition for identifying MASH patients by NHS England. The definition uses the **International Classification of Disease 10th Version** (ICD-10) coding schema. This coding schema is used within the Admitted Patient Care and Outpatient datasets for recording patient diagnoses. The ICD-10 codes used to identify relevant patients and activities are where a primary diagnosis has been recorded with either:
+
+* **K740**: Hepatic Fibrosis
+* **K760**: Fatty (change of) liver, not elsewhere classified
+
+## Additional Considerations
+
+### Alcohol related diagnosis
+MASLD and MASH are defined as a [long-lasting liver condition](https://britishlivertrust.org.uk/information-and-support/liver-conditions/masld-nafld-and-fatty-liver-disease/) caused by having too much fat within the liver. The causes for these are *not associated* with alcohol consumption. Liver disease due to alcohol consumption are identified and diagnosed with different ICD-10 codes.
+
+Therefore, we need to flag those patients with a MASLD or MASH diagnosis where there is also a record of an alcohol related condition. [Public Health England](https://assets.publishing.service.gov.uk/media/601c0da0e90e0711cf5955b1/RELATI_1-1.pdf) identified ICD-10 codes that are deemed _wholly attributable conditions_. These are shown in the table below:
+
+| Condition                                                     | ICD10 code(s) |
+|---------------------------------------------------------------|---------------|
+| Alcohol-induced pseudo-Cushing’s syndrome                     | E24.4         |
+| Mental and behavioural disorders due to use of alcohol        | F10           |
+| Degeneration of nervous system due to alcohol                 | G31.2         |
+| Alcoholic polyneuropathy                                       | G62.1         |
+| Alcoholic myopathy                                            | G72.1         |
+| Alcoholic cardiomyopathy                                      | I42.6         |
+| Alcoholic gastritis                                           | K29.2         |
+| Alcoholic liver disease                                       | K70           |
+| Alcohol-induced chronic pancreatitis                          | K86.0         |
+| Ethanol poisoning                                             | T51.0         |
+| Methanol poisoning                                            | T51.1         |
+| Toxic effect of alcohol, unspecified                          | T51.9         |
+| Accidental poisoning by and exposure to alcohol               | X45           |
+| Intentional self-poisoning by and exposure to alcohol         | X65           |
+| Poisoning by and exposure to alcohol, undetermined intent     | Y15           |
+| Alcohol-induced acute pancreatitis                            | K85.2         |
+| Foetal alcohol syndrome (dysmorphic)                           | Q86.0         |
+| Excess alcohol blood levels                                   | R78.0         |
+| Evidence of alcohol involvement determined by blood alcohol level | Y90      |
+| Evidence of alcohol involvement determined by level of intoxication | Y91  |
+
+The analytical pipeline for creating the relevant extracts of Admitted Patient Care data contain functionality to create a flag to identify any of these ICD-10 codes recorded as a **secondary diagnosis** within the MASLD/MASH admission.
+
+### Liver Cirrhosis
+For the purposes of future analysis it will be helpful to also identify the presence of liver cirrhosis within MASLD/MASH patient activities. Functionality has been created for flagging liver cirrhosis within Admitted Patient Care data where there is a secondary diagnosis within the MASLD/MASH admissions for the following conditions:
+
+* **K741**: Hepatic sclerosis
+* **K742**: Hepatic fibrosis with hepatic sclerosis
+* **K743**: Primary biliary cirrhosis
+* **K744**: Secondary biliary cirrhosis
+* **K745**: Biliary cirrhosis, unspecified
+* **K746**: Other and unspecified cirrhosis of liver
+
+<br/>
+
+# Methodology for Identifying Patients and Activity
+The diagram below provides an overview of the pipeline for identifying MASLD/MASH patients and associated admissions and outpatient attendances.
+
+![](../images/Methodology.drawio.svg)
+
+This methodology consists of the following stages:
+
+1. **Identifying patients with a MASLD/MASH diagnosis**. In the first stage the Admitted Patient Care and Outpatient datasets are queried to extract all activities where the primary diagnosis meets the conditions from the starting definition. Activities within the period Apr 2019 - Mar 2024 are extracted. The alcohol and cirrhosis flags discussed in the previous section are also determined during this stage. These datasets are combined to create a *Master Patient Index* (MPI) of all individual patients identified.
+
+2. **Find all MASLD/MASH secondary care activities**. This MPI is then used to find **all** relevant admissions and outpatient attendances for these patients. There is no limit on the time period for this analysis. This is to find all relevant activities and importantly to find the earliest date the patient was *known* to have a MASLD/MASH diagnosis within secondary care. Sub-datasets are created for identifying the earliest activities for each patient within the different admission and outpatient settings (Elective Daycase, Emergency admissions etc.)
+
+3. **Create MPI with Earliest Dates**. Combining these sub-datasets the MPI can be expanded to contain the earliest dates of all activities and flag if the patient has any alcohol related admission or cirrhosis flags. This dataset can then be used for the purposes of analysing activity along the diagnostic elements of the pathway.

@@ -17,6 +17,9 @@ extract_dates_sql_Where <- function(query) {
   return(unique_dates)
 }
 
-eda_sql_statement <- sql_statement_test <- read_file(paste0(here(),"/src/scripts/etl/udal_extracts/mash_spells_analysis.sql"))
+eda_sql_statement <- read_file(paste0(here(),"/src/scripts/etl/udal_extracts/mash_spells_analysis.sql"))
 
 dates_in_where_clause <- extract_dates_sql_Where(eda_sql_statement)
+
+eda_op_sql_statement <- read_file(paste0(here(),"/src/scripts/etl/udal_extracts/mash_opa_analysis.sql"))
+dates_in_where_clause_op <- extract_dates_sql_Where(eda_op_sql_statement)

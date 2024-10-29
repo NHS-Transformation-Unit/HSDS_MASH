@@ -1,2 +1,4 @@
 load_packages(mash_def_packages)
 load_packages(mash_eda_packages)
+load_packages(mash_eda_op_packages)
+load_packages(mash_mpi_packages)

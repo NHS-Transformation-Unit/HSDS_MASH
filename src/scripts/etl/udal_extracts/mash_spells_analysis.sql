@@ -1,4 +1,5 @@
 SELECT APCS.[APCS_Ident],
+       APCS.[Der_Pseudo_NHS_Number],
        APCS.[Admission_Date],
        APCS.[Discharge_Date],
 	   APCS.[Der_Age_at_CDS_Activity_Date] AS [Age],
@@ -379,8 +380,24 @@ SELECT APCS.[APCS_Ident],
 				1
 			ELSE
 				0
-		END AS [CC_HIV_Flag]
-FROM [Reporting_MESH_APC].[APCS_Core_Daily] AS [APCS]
+		END AS [CC_HIV_Flag],
+		CASE
+		   WHEN
+		   (
+				APCS.[Der_Diagnosis_All] LIKE '%,K741%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K742%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K743%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K744%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K745%'
+				OR APCS.[Der_Diagnosis_All] LIKE '%,K746%'
+			) THEN
+				1
+			ELSE
+				0
+			END AS [LC_Flag]
+
+
+FROM [SUS_APC].[APCS_Core_Monthly_Historic] AS [APCS]
     LEFT JOIN [UKHD_Data_Dictionary].[Ethnic_Category_Code_SCD] AS [ETH]
         ON APCS.[Ethnic_Group] = ETH.[Main_Code_Text]
            AND ETH.[Is_Latest] = 1

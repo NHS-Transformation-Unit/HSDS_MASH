@@ -1,9 +1,5 @@
 <img src="images/TU_logo_large.png" alt="TU logo" width="200" align="right"/>
 
-<br/>
-<br/>
-<br/>
-
 # Horizon Scanning, Demand Signalling (HSDS): MASH Pathway Analysis and Modelling Repository
 This repository contains the codebase for undertaking all analysis and modelling of the MASH pathway.
 
@@ -26,11 +22,13 @@ The current structure of the repository is detailed below:
 ├───.gitignore
 ├───.Rproj
 ├───data
-    └───reference
+    ├───raw
+    ├───reference
+    └───theograph
 ├───documentation
-    ├───project_documentation
-    └───guidance
+    └───project_documentation
 ├───images
+    └───theograph_example
 └───src
     ├───config
     ├───outputs
