@@ -51,5 +51,9 @@ rsconnect/
 # raw data
 data/raw/ncdr_extracts/
 
+# theograph example data and images
+data/theograph/
+images/theograph_example/
+
 # html outputs
 src/outputs/*.html
